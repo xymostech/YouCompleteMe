@@ -97,7 +97,7 @@ endfunction
 function! s:AllowedToCompleteInCurrentFile()
   " If the user set the current filetype as a filetype that YCM should ignore,
   " then we don't do anything
-  return !get( g:ycm_filetypes_to_completely_ignore, &filetype, 0 )
+  return get( g:ycm_filetypes_to_include, &filetype, 0 )
 endfunction
 
 
