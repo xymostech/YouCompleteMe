@@ -64,16 +64,6 @@ function! youcompleteme#Enable()
   let g:syntastic_objc_checkers = ['ycm']
   let g:syntastic_objcpp_checkers = ['ycm']
 
-  " With this command, when the completion window is visible, the tab key
-  " (default) will select the next candidate in the window. In vim, this also
-  " changes the typed-in text to that of the candidate completion.
-  exe 'inoremap <expr>' . g:ycm_key_select_completion .
-        \ ' pumvisible() ? "\<C-n>" : "\' . g:ycm_key_select_completion .'"'
-
-  " This selects the previous candidate for shift-tab (default)
-  exe 'inoremap <expr>' . g:ycm_key_previous_completion .
-        \ ' pumvisible() ? "\<C-p>" : "\' . g:ycm_key_previous_completion .'"'
-
   " <c-x><c-o> trigger omni completion, <c-p> deselects the first completion
   " candidate that vim selects by default
   exe 'inoremap <unique> ' . g:ycm_key_invoke_completion . ' <C-X><C-O><C-P>'
